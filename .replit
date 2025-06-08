@@ -5,6 +5,7 @@ modules = ["nodejs-18", "web"]
 
 [nix]
 channel = "stable-23_05"
+packages = ["unzip"]
 
 [deployment]
 deploymentTarget = "static"

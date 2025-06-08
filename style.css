@@ -1,97 +1,257 @@
-html,
+:root {
+--primary: #38bdf8;
+--secondary: #c084fc;
+--accent: #f472b6;
+  scrollbar-color: color-mix(in oklch, currentColor 35%, #38bdf8) #0f172a;
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+font-family: 'Poppins', sans-serif;
+background: radial-gradient(ellipse at bottom, #0f172a 0%, #0c0a1e 100%);
+color: #e2e8f0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.glass {
+background: rgba(30, 30, 60, 0.5);
+backdrop-filter: saturate(180%) blur(12px);
+-webkit-backdrop-filter: saturate(180%) blur(12px);
+border-radius: 1.5rem;
+border: 1px solid rgba(255, 255, 255, 0.1);
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+box-shadow: 0 8px 32px rgba(2, 8, 20, 0.4);
 }
 
-* {
-  box-sizing: border-box;
+.glass:hover {
+transform: translateY(-8px) scale(1.02);
+box-shadow: 0 15px 35px rgba(56, 189, 248, 0.3);
+border: 1px solid rgba(56, 189, 248, 0.3);
 }
 
-main {
-  min-height: 100vh;
-  padding: 4rem 2rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+nav a.active {
+color: var(--primary);
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+section {
+scroll-margin-top: 4rem;
 }
 
-.title,
-.description {
-  text-align: center;
+.hidden-page {
+display: none;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.tab-btn {
+cursor: pointer;
+padding: 0.5rem 1.25rem;
+font-weight: 500;
+font-size: 1.125rem;
+transition: all 0.3s ease;
+position: relative;
+border-radius: 0.5rem;
+overflow: hidden;
+z-index: 1;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.tab-btn::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.2), transparent);
+transition: width 0.6s ease;
+z-index: -1;
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+.tab-btn:hover::before {
+width: 100%;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+.tab-btn.active {
+color: var(--primary);
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.tab-btn.active::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 3px;
+background: linear-gradient(90deg, var(--primary), var(--secondary));
+border-radius: 10px;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.pulse {
+animation: pulse 2s infinite;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+@keyframes pulse {
+0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.5); }
+70% { box-shadow: 0 0 0 15px rgba(56, 189, 248, 0); }
+100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.gradient-text {
+background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-size: 200% auto;
+animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+
+.glow {
+text-shadow: 0 0 10px rgba(56, 189, 248, 0.7);
+}
+
+.floating {
+animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-15px); }
+100% { transform: translateY(0px); }
+}
+
+.grid-pattern {
+background-image: 
+radial-gradient(rgba(124, 58, 237, 0.1) 1px, transparent 2px),
+radial-gradient(rgba(56, 189, 248, 0.1) 1px, transparent 2px);
+background-size: 40px 40px;
+background-position: 0 0, 20px 20px;
+}
+
+.terminal {
+background: rgba(15, 23, 42, 0.8);
+border: 1px solid rgba(56, 189, 248, 0.2);
+border-radius: 0.75rem;
+padding: 1.5rem;
+font-family: monospace;
+position: relative;
+}
+
+.terminal::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 30px;
+background: rgba(15, 23, 42, 0.5);
+border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.terminal-title {
+position: absolute;
+top: 8px;
+left: 50%;
+transform: translateX(-50%);
+color: #94a3b8;
+font-size: 0.8rem;
+}
+
+.blink {
+animation: blink 1s infinite;
+}
+
+@keyframes blink {
+0%, 100% { opacity: 1; }
+50% { opacity: 0.3; }
+}
+
+.code-line {
+display: block;
+margin-bottom: 0.5rem;
+}
+
+.code-comment {
+color: #64748b;
+}
+
+.code-keyword {
+color: var(--primary);
+}
+
+.code-string {
+color: var(--accent);
+}
+
+.btn-primary {
+background: linear-gradient(90deg, var(--primary), var(--secondary));
+border: none;
+color: white;
+font-weight: 500;
+transition: all 0.3s ease;
+position: relative;
+overflow: hidden;
+}
+
+.btn-primary:hover {
+transform: translateY(-3px);
+box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+}
+
+.btn-primary::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, var(--secondary), var(--primary));
+opacity: 0;
+transition: opacity 0.3s ease;
+z-index: -1;
+}
+
+.btn-primary:hover::after {
+opacity: 1;
+}
+
+.social-icon {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background: rgba(30, 30, 60, 0.5);
+color: var(--primary);
+font-size: 1.5rem;
+transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+transform: translateY(-5px);
+background: var(--primary);
+color: white;
+box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+}
+
+.footer-wave {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+overflow: hidden;
+line-height: 0;
+transform: rotate(180deg);
+}
+
+.footer-wave svg {
+position: relative;
+display: block;
+width: calc(100% + 1.3px);
+height: 80px;
+}
+
+.footer-wave .shape-fill {
+fill: rgba(15, 23, 42, 0.8);
 }
