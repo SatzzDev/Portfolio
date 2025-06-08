@@ -5,6 +5,10 @@
   scrollbar-color: color-mix(in oklch, currentColor 35%, #38bdf8) #0f172a;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
 font-family: 'Poppins', sans-serif;
 background: radial-gradient(ellipse at bottom, #0f172a 0%, #0c0a1e 100%);
