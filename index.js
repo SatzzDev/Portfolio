@@ -4,7 +4,7 @@ const port = 3000;
 const path = require('path')
 
 
-app.use(express.static(process.cwd())
+app.use(express.static('public'))
 
 
 app.get('/', (req, res) => {
