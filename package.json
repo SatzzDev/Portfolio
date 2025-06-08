@@ -3,11 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "node index.js"
   },
   "dependencies": {
-    "vite": "^5.4.8"
+    "express": "^5.1.0",
   }
 }
