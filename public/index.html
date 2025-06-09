@@ -2,7 +2,8 @@
 <html lang="en" data-theme="night">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="description" content="SatzzDev - Fullstack Developer & Automation Nerd" />
 <meta name="keywords" content="SatzzDev, Kurniawan, Satria, Satzz, Kurniawan Satria" />
 <meta name="author" content="SatzzDev" />
@@ -45,295 +46,295 @@ animation: floating 6s ease-in-out infinite;
 50% { transform: translateY(-15px); }
 100% { transform: translateY(0px); }
 }
-  /* Project Card Animations */
-  .project-card {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  overflow: hidden;
-  }
+/* Project Card Animations */
+.project-card {
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+position: relative;
+overflow: hidden;
+}
 
-  .project-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.1), transparent);
-  transition: left 0.6s ease;
-  z-index: 1;
-  }
+.project-card::before {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.1), transparent);
+transition: left 0.6s ease;
+z-index: 1;
+}
 
-  .project-card:hover::before {
-  left: 100%;
-  }
+.project-card:hover::before {
+left: 100%;
+}
 
-  .project-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 
-    0 20px 40px rgba(56, 189, 248, 0.2),
-    0 0 0 1px rgba(56, 189, 248, 0.1);
-  }
+.project-card:hover {
+transform: translateY(-10px) scale(1.02);
+box-shadow: 
+0 20px 40px rgba(56, 189, 248, 0.2),
+0 0 0 1px rgba(56, 189, 248, 0.1);
+}
 
-  .project-card:hover .card-body {
-  transform: translateY(-5px);
-  }
+.project-card:hover .card-body {
+transform: translateY(-5px);
+}
 
-  .project-card:hover figure {
-  transform: scale(1.1);
-  }
+.project-card:hover figure {
+transform: scale(1.1);
+}
 
-  .project-card figure {
-  transition: transform 0.4s ease;
-  overflow: hidden;
-  }
+.project-card figure {
+transition: transform 0.4s ease;
+overflow: hidden;
+}
 
-  .project-card .card-body {
-  transition: transform 0.3s ease;
-  position: relative;
-  z-index: 2;
-  }
+.project-card .card-body {
+transition: transform 0.3s ease;
+position: relative;
+z-index: 2;
+}
 
-  .project-card:hover .badge {
-  animation: badgePulse 0.6s ease;
-  }
+.project-card:hover .badge {
+animation: badgePulse 0.6s ease;
+}
 
-  @keyframes badgePulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-  }
+@keyframes badgePulse {
+0% { transform: scale(1); }
+50% { transform: scale(1.1); }
+100% { transform: scale(1); }
+}
 
-  .project-card:hover .card-title {
-  color: var(--primary);
-  text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
-  }
+.project-card:hover .card-title {
+color: var(--primary);
+text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
 
-  .project-card:active {
-  transform: translateY(-5px) scale(0.98);
-  transition: all 0.1s ease;
-  }
+.project-card:active {
+transform: translateY(-5px) scale(0.98);
+transition: all 0.1s ease;
+}
 
-  /* Button Hover Animations */
-  .btn {
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  overflow: hidden;
-  }
+/* Button Hover Animations */
+.btn {
+transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+position: relative;
+overflow: hidden;
+}
 
-  .btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.6s ease;
-  z-index: 1;
-  }
+.btn::before {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+transition: left 0.6s ease;
+z-index: 1;
+}
 
-  .btn:hover::before {
-  left: 100%;
-  }
+.btn:hover::before {
+left: 100%;
+}
 
-  .btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  }
+.btn:hover {
+transform: translateY(-3px) scale(1.05);
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
 
-  .btn:active {
-  transform: translateY(-1px) scale(0.98);
-  transition: all 0.1s ease;
-  }
+.btn:active {
+transform: translateY(-1px) scale(0.98);
+transition: all 0.1s ease;
+}
 
-  .btn-outline:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
-  }
+.btn-outline:hover {
+transform: translateY(-3px) scale(1.05);
+box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+}
 
-  .btn-circle:hover {
-  transform: translateY(-5px) rotate(5deg) scale(1.1);
-  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
-  }
+.btn-circle:hover {
+transform: translateY(-5px) rotate(5deg) scale(1.1);
+box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+}
 
-  .btn-ghost:hover {
-  background: rgba(56, 189, 248, 0.1);
-  color: #38bdf8;
-  transform: translateY(-2px) scale(1.05);
-  }
+.btn-ghost:hover {
+background: rgba(56, 189, 248, 0.1);
+color: #38bdf8;
+transform: translateY(-2px) scale(1.05);
+}
 
-  /* Tab Animations */
-  .tab {
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  overflow: hidden;
-  }
+/* Tab Animations */
+.tab {
+transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+position: relative;
+overflow: hidden;
+}
 
-  .tab::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #38bdf8, #c084fc);
-  transition: width 0.4s ease;
-  }
+.tab::before {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 0;
+height: 3px;
+background: linear-gradient(90deg, #38bdf8, #c084fc);
+transition: width 0.4s ease;
+}
 
-  .tab:hover::before {
-  width: 100%;
-  }
+.tab:hover::before {
+width: 100%;
+}
 
-  .tab:hover {
-  transform: translateY(-2px);
-  color: #38bdf8;
-  background: rgba(56, 189, 248, 0.1);
-  text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
-  }
+.tab:hover {
+transform: translateY(-2px);
+color: #38bdf8;
+background: rgba(56, 189, 248, 0.1);
+text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
 
-  .tab-active {
-  background: rgba(56, 189, 248, 0.2);
-  color: #38bdf8;
-  }
+.tab-active {
+background: rgba(56, 189, 248, 0.2);
+color: #38bdf8;
+}
 
-  .tab-active::before {
-  width: 100%;
-  }
+.tab-active::before {
+width: 100%;
+}
 
-  /* Card Hover Animations */
-  .card {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  overflow: hidden;
-  }
+/* Card Hover Animations */
+.card {
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+position: relative;
+overflow: hidden;
+}
 
-  .card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, transparent, rgba(56, 189, 248, 0.05), transparent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  }
+.card::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(45deg, transparent, rgba(56, 189, 248, 0.05), transparent);
+opacity: 0;
+transition: opacity 0.3s ease;
+pointer-events: none;
+}
 
-  .card:hover::after {
-  opacity: 1;
-  }
+.card:hover::after {
+opacity: 1;
+}
 
-  .card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(56, 189, 248, 0.2);
-  }
+.card:hover {
+transform: translateY(-8px) scale(1.02);
+box-shadow: 0 20px 40px rgba(56, 189, 248, 0.2);
+}
 
-  /* Avatar Animations */
-  .avatar:hover {
-  transform: scale(1.05) rotate(2deg);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
+/* Avatar Animations */
+.avatar:hover {
+transform: scale(1.05) rotate(2deg);
+transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-  .avatar:hover .w-80 {
-  box-shadow: 0 20px 40px rgba(56, 189, 248, 0.3);
-  }
+.avatar:hover .w-80 {
+box-shadow: 0 20px 40px rgba(56, 189, 248, 0.3);
+}
 
-  /* Progress Bar Animations */
-  .progress:hover {
-  transform: scaleY(1.2);
-  transition: all 0.3s ease;
-  }
+/* Progress Bar Animations */
+.progress:hover {
+transform: scaleY(1.2);
+transition: all 0.3s ease;
+}
 
-  /* Badge Animations */
-  .badge {
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
+/* Badge Animations */
+.badge {
+transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-  .badge:hover {
-  transform: scale(1.1) rotate(-2deg);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
+.badge:hover {
+transform: scale(1.1) rotate(-2deg);
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
 
-  /* Dropdown Animations */
-  .dropdown-content {
-  animation: dropdownSlide 0.3s ease-out;
-  }
+/* Dropdown Animations */
+.dropdown-content {
+animation: dropdownSlide 0.3s ease-out;
+}
 
-  @keyframes dropdownSlide {
-  from {
-    opacity: 0;
-    transform: translateY(-10px) scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-  }
+@keyframes dropdownSlide {
+from {
+opacity: 0;
+transform: translateY(-10px) scale(0.95);
+}
+to {
+opacity: 1;
+transform: translateY(0) scale(1);
+}
+}
 
-  /* Social Icon Animations */
-  .fab {
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
+/* Social Icon Animations */
+.fab {
+transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-  .fab:hover {
-  transform: scale(1.3) rotate(15deg);
-  color: #38bdf8;
-  filter: drop-shadow(0 5px 15px rgba(56, 189, 248, 0.4));
-  }
+.fab:hover {
+transform: scale(1.3) rotate(15deg);
+color: #38bdf8;
+filter: drop-shadow(0 5px 15px rgba(56, 189, 248, 0.4));
+}
 
-  /* Navbar Animations */
-  .navbar {
-  transition: all 0.3s ease;
-  }
+/* Navbar Animations */
+.navbar {
+transition: all 0.3s ease;
+}
 
-  .navbar:hover {
-  backdrop-filter: blur(20px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  }
+.navbar:hover {
+backdrop-filter: blur(20px);
+box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
 
-  /* Input and Form Element Animations */
-  input[type="radio"]:checked + label,
-  .theme-controller:checked {
-  transform: scale(1.05);
-  background: rgba(56, 189, 248, 0.2);
-  transition: all 0.3s ease;
-  }
+/* Input and Form Element Animations */
+input[type="radio"]:checked + label,
+.theme-controller:checked {
+transform: scale(1.05);
+background: rgba(56, 189, 248, 0.2);
+transition: all 0.3s ease;
+}
 
-  /* Alert Animations */
-  .alert {
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
+/* Alert Animations */
+.alert {
+transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-  .alert:hover {
-  transform: translateX(10px);
-  box-shadow: 0 5px 20px rgba(56, 189, 248, 0.2);
-  }
+.alert:hover {
+transform: translateX(10px);
+box-shadow: 0 5px 20px rgba(56, 189, 248, 0.2);
+}
 
-  /* Link Animations */
-  a:not(.btn) {
-  transition: all 0.3s ease;
-  position: relative;
-  }
+/* Link Animations */
+a:not(.btn) {
+transition: all 0.3s ease;
+position: relative;
+}
 
-  a:not(.btn):hover {
-  color: #38bdf8;
-  text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
-  }
+a:not(.btn):hover {
+color: #38bdf8;
+text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
 
-  /* Mockup Code Animations */
-  .mockup-code:hover {
-  transform: scale(1.02);
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
-  }
+/* Mockup Code Animations */
+.mockup-code:hover {
+transform: scale(1.02);
+transition: all 0.3s ease;
+box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+}
 
-  /* Footer Animations */
-  .footer:hover {
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(192, 132, 252, 0.1));
-  transition: all 0.5s ease;
-  }
+/* Footer Animations */
+.footer:hover {
+background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(192, 132, 252, 0.1));
+transition: all 0.5s ease;
+}
 </style>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
@@ -346,45 +347,6 @@ SatzzDev.
 </a>
 </div>
 <div class="navbar-end">
-<!-- <div class="dropdown">
-<div tabindex="0" role="button" class="btn btn-ghost">
-<i class="fas fa-palette"></i>
-</div>
-<ul tabindex="0" class="dropdown-content bg-base-300 rounded-box z-1 w-30 p-2 shadow-2xl">
-<li>
-<input
-type="radio"
-name="theme-dropdown"
-class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
-aria-label="Default"
-value="default" />
-</li>
-<li>
-<input
-type="radio"
-name="theme-dropdown"
-class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
-aria-label="Aqua"
-value="aqua" />
-</li>
-<li>
-<input
-type="radio"
-name="theme-dropdown"
-class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
-aria-label="Synthwave"
-value="synthwave" />
-</li>
-<li>
-<input
-type="radio"
-name="theme-dropdown"
-class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
-aria-label="Dracula"
-value="dracula" />
-</li>
-</ul>
-</div> -->
 <!-- Mobile Navigation -->
 <div class="lg:hidden dropdown dropdown-end">
 <div tabindex="0" role="button" class="btn btn-ghost">
@@ -455,97 +417,36 @@ see projects
 
 <!-- About Page -->
 <section id="about" class="page hidden-page">
+<div class="py-20">
+<h2 class="text-5xl font-bold text-center text-primary mb-16">About Me</h2>
 <div class="hero min-h-screen">
-<div class="hero-content flex-col lg:flex-row gap-8 max-w-7xl mx-auto px-4">
-<div class="card w-full max-w-sm lg:w-96 bg-base-200 shadow-xl">
-<figure class="px-6 pt-6">
-<img src="https://res.cloudinary.com/dz15rwevx/image/upload/v1749385666/logo_izvheb.png" alt="SatzzDev" class="rounded-xl w-full h-auto max-w-80" />
-</figure>
-<div class="card-body text-center">
-<h2 class="card-title justify-center text-primary">Kurniawan Satria</h2>
+<div class="hero-content flex-col lg:flex-row gap-12">
+<div class="avatar floating">
+<div class="w-80 rounded-2xl shadow-2xl">
+<img src="https://res.cloudinary.com/dz15rwevx/image/upload/v1749385666/logo_izvheb.png" alt="SatzzDev" />
 </div>
 </div>
-<div class="flex-1 w-full">
-<h1 class="text-3xl lg:text-5xl font-bold text-primary mb-6 lg:mb-8 text-center lg:text-left">About Me</h1>
-<div class="prose prose-sm lg:prose-lg max-w-none mb-6 lg:mb-8">
-<p class="text-lg lg:text-xl leading-relaxed">
-Hey there! I'm <span class="font-bold text-primary">Kurniawan Satria</span>, 
-but most people know me as <span class="font-bold text-secondary">SatzzDev</span>. 
-I'm a passionate fullstack developer who loves turning ideas into reality through code.
+<div class="max-w-2xl text-center lg:text-left">
+<h3 class="text-3xl font-semibold mb-6">Yo, I'm SatzzDev! 🚀</h3>
+<p class="text-xl mb-6">
+A fullstack dev with a knack for crafting slick web apps, AI-powered bots, and automation tools. I live for turning ideas into reality with code, coffee, and a bit of creativity. Been diving into JavaScript, Python, and Node.js to build stuff that’s both functional and fun.
 </p>
-<p class="text-base lg:text-lg leading-relaxed mt-4">
-My journey started with curiosity about how things work behind the scenes. Now, I specialize in building 
-automation tools, AI-powered bots, and sleek web applications that solve real-world problems. 
-Whether it's a WhatsApp bot that can download YouTube videos or a complex web application with modern UI/UX, 
-I'm always excited to take on new challenges.
+<p class="text-xl mb-6">
+When I’m not coding, you’ll find me experimenting with new tech, sipping coffee, or maybe even memeing on X. My mission? To make the digital world a cooler place, one project at a time. <span class="text-secondary font-medium">Wanna join the ride?</span>
 </p>
-</div>
-
-<div class="mockup-code bg-base-300 mb-6 lg:mb-8 text-xs lg:text-sm overflow-x-auto">
-<pre data-prefix="$"><code>const SatzzDev = {</code></pre>
-<pre data-prefix=">" class="text-warning"><code>  name: "Kurniawan Satria",</code></pre>
-<pre data-prefix=">" class="text-success"><code>  role: "Fullstack Developer",</code></pre>
-<pre data-prefix=">" class="text-info"><code>  specialty: "Automation & AI Tools",</code></pre>
-<pre data-prefix=">" class="text-accent"><code>  passion: "Building sleek web apps and bots",</code></pre>
-<pre data-prefix=">" class="text-primary"><code>  location: "Indonesia",</code></pre>
-<pre data-prefix=">" class="text-secondary"><code>  experience: "3+ years",</code></pre>
-<pre data-prefix=">" class="text-warning"><code>  languages: ["JavaScript", "Python", "PHP"],</code></pre>
-<pre data-prefix=">" class="text-success"><code>  frameworks: ["React", "Node.js", "Express"],</code></pre>
-<pre data-prefix=">" class="text-info"><code>  hobbies: ["Gaming", "Music", "Exploring new tech"],</code></pre>
-<pre data-prefix=">" class="text-accent"><code>  collaborate: true,</code></pre>
-<pre data-prefix=">" class="text-primary"><code>  coffee_lover: true</code></pre>
-<pre data-prefix="$"><code>};</code></pre>
-<pre data-prefix="#" class="text-base-content/70"><code>// Always down to collab or chat about cool projects!</code></pre>
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
-<div class="card bg-base-200 shadow-lg">
-<div class="card-body p-4 lg:p-6">
-<h3 class="card-title text-primary text-lg lg:text-xl">
-<i class="fas fa-rocket"></i>
-What I Do
-</h3>
-<ul class="list-disc list-inside space-y-1 lg:space-y-2 text-sm lg:text-base">
-<li>Build responsive web applications</li>
-<li>Create automation bots for various platforms</li>
-<li>Develop AI-powered tools and features</li>
-<li>Design intuitive user interfaces</li>
-<li>Optimize performance and user experience</li>
-</ul>
-</div>
-</div>
-
-<div class="card bg-base-200 shadow-lg">
-<div class="card-body p-4 lg:p-6">
-<h3 class="card-title text-secondary text-lg lg:text-xl">
-<i class="fas fa-heart"></i>
-What I Love
-</h3>
-<ul class="list-disc list-inside space-y-1 lg:space-y-2 text-sm lg:text-base">
-<li>Learning new technologies</li>
-<li>Solving complex problems</li>
-<li>Open source contributions</li>
-<li>Collaborating with fellow developers</li>
-<li>Creating tools that make life easier</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div class="mt-6 lg:mt-8">
-<div class="alert alert-info p-4">
-<i class="fas fa-info-circle text-lg"></i>
-<span class="text-sm lg:text-base">
-<strong>Fun Fact:</strong> I started programming because I wanted to automate my gaming tasks. 
-Now I help others automate their workflows and build amazing digital experiences!
-</span>
+<div class="flex gap-4 justify-center lg:justify-start">
+<a href="mailto:satganzdevs@gmail.com" class="btn btn-outline btn-primary btn-lg">
+<i class="fas fa-envelope"></i> Hit Me Up
+</a>
+<a href="https://github.com/SatzzDev" class="btn btn-outline btn-secondary btn-lg">
+<i class="fab fa-github"></i> Check My Code
+</a>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-
 <!-- Skills Page -->
 <section id="skills" class="page hidden-page">
 <div class="py-20">
