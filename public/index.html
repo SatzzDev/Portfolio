@@ -34,308 +34,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-body { font-family: 'Poppins', sans-serif; }
-.hidden-page { display: none; }
-html { scroll-behavior: smooth; }
-.floating {
-animation: floating 6s ease-in-out infinite;
-}
-@keyframes floating {
-0% { transform: translateY(0px); }
-50% { transform: translateY(-15px); }
-100% { transform: translateY(0px); }
-}
-/* Project Card Animations */
-.project-card {
-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-position: relative;
-overflow: hidden;
-}
-
-.project-card::before {
-content: '';
-position: absolute;
-top: 0;
-left: -100%;
-width: 100%;
-height: 100%;
-background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.1), transparent);
-transition: left 0.6s ease;
-z-index: 1;
-}
-
-.project-card:hover::before {
-left: 100%;
-}
-
-.project-card:hover {
-transform: translateY(-10px) scale(1.02);
-box-shadow: 
-0 20px 40px rgba(56, 189, 248, 0.2),
-0 0 0 1px rgba(56, 189, 248, 0.1);
-}
-
-.project-card:hover .card-body {
-transform: translateY(-5px);
-}
-
-.project-card:hover figure {
-transform: scale(1.1);
-}
-
-.project-card figure {
-transition: transform 0.4s ease;
-overflow: hidden;
-}
-
-.project-card .card-body {
-transition: transform 0.3s ease;
-position: relative;
-z-index: 2;
-}
-
-.project-card:hover .badge {
-animation: badgePulse 0.6s ease;
-}
-
-@keyframes badgePulse {
-0% { transform: scale(1); }
-50% { transform: scale(1.1); }
-100% { transform: scale(1); }
-}
-
-.project-card:hover .card-title {
-color: var(--primary);
-text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
-}
-
-.project-card:active {
-transform: translateY(-5px) scale(0.98);
-transition: all 0.1s ease;
-}
-
-/* Button Hover Animations */
-.btn {
-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-position: relative;
-overflow: hidden;
-}
-
-.btn::before {
-content: '';
-position: absolute;
-top: 0;
-left: -100%;
-width: 100%;
-height: 100%;
-background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-transition: left 0.6s ease;
-z-index: 1;
-}
-
-.btn:hover::before {
-left: 100%;
-}
-
-.btn:hover {
-transform: translateY(-3px) scale(1.05);
-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-.btn:active {
-transform: translateY(-1px) scale(0.98);
-transition: all 0.1s ease;
-}
-
-.btn-outline:hover {
-transform: translateY(-3px) scale(1.05);
-box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
-}
-
-.btn-circle:hover {
-transform: translateY(-5px) rotate(5deg) scale(1.1);
-box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
-}
-
-.btn-ghost:hover {
-background: rgba(56, 189, 248, 0.1);
-color: #38bdf8;
-transform: translateY(-2px) scale(1.05);
-}
-
-/* Tab Animations */
-.tab {
-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-position: relative;
-overflow: hidden;
-}
-
-.tab::before {
-content: '';
-position: absolute;
-bottom: 0;
-left: 0;
-width: 0;
-height: 3px;
-background: linear-gradient(90deg, #38bdf8, #c084fc);
-transition: width 0.4s ease;
-}
-
-.tab:hover::before {
-width: 100%;
-}
-
-.tab:hover {
-transform: translateY(-2px);
-color: #38bdf8;
-background: rgba(56, 189, 248, 0.1);
-text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
-}
-
-.tab-active {
-background: rgba(56, 189, 248, 0.2);
-color: #38bdf8;
-}
-
-.tab-active::before {
-width: 100%;
-}
-
-/* Card Hover Animations */
-.card {
-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-position: relative;
-overflow: hidden;
-}
-
-.card::after {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: linear-gradient(45deg, transparent, rgba(56, 189, 248, 0.05), transparent);
-opacity: 0;
-transition: opacity 0.3s ease;
-pointer-events: none;
-}
-
-.card:hover::after {
-opacity: 1;
-}
-
-.card:hover {
-transform: translateY(-8px) scale(1.02);
-box-shadow: 0 20px 40px rgba(56, 189, 248, 0.2);
-}
-
-/* Avatar Animations */
-.avatar:hover {
-transform: scale(1.05) rotate(2deg);
-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.avatar:hover .w-80 {
-box-shadow: 0 20px 40px rgba(56, 189, 248, 0.3);
-}
-
-/* Progress Bar Animations */
-.progress:hover {
-transform: scaleY(1.2);
-transition: all 0.3s ease;
-}
-
-/* Badge Animations */
-.badge {
-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.badge:hover {
-transform: scale(1.1) rotate(-2deg);
-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Dropdown Animations */
-.dropdown-content {
-animation: dropdownSlide 0.3s ease-out;
-}
-
-@keyframes dropdownSlide {
-from {
-opacity: 0;
-transform: translateY(-10px) scale(0.95);
-}
-to {
-opacity: 1;
-transform: translateY(0) scale(1);
-}
-}
-
-/* Social Icon Animations */
-.fab {
-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.fab:hover {
-transform: scale(1.3) rotate(15deg);
-color: #38bdf8;
-filter: drop-shadow(0 5px 15px rgba(56, 189, 248, 0.4));
-}
-
-/* Navbar Animations */
-.navbar {
-transition: all 0.3s ease;
-}
-
-.navbar:hover {
-backdrop-filter: blur(20px);
-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* Input and Form Element Animations */
-input[type="radio"]:checked + label,
-.theme-controller:checked {
-transform: scale(1.05);
-background: rgba(56, 189, 248, 0.2);
-transition: all 0.3s ease;
-}
-
-/* Alert Animations */
-.alert {
-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.alert:hover {
-transform: translateX(10px);
-box-shadow: 0 5px 20px rgba(56, 189, 248, 0.2);
-}
-
-/* Link Animations */
-a:not(.btn) {
-transition: all 0.3s ease;
-position: relative;
-}
-
-a:not(.btn):hover {
-color: #38bdf8;
-text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
-}
-
-/* Mockup Code Animations */
-.mockup-code:hover {
-transform: scale(1.02);
-transition: all 0.3s ease;
-box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
-}
-
-/* Footer Animations */
-.footer:hover {
-background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(192, 132, 252, 0.1));
-transition: all 0.5s ease;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 <body class="min-h-screen bg-base-100">
@@ -380,7 +79,7 @@ SatzzDev.
 </div>
 </div>
 <div>
-<h1 class="text-5xl font-bold">
+<h1 class="text-4xl font-bold">
 hey, i'm <span id="typ" class="text-primary"></span> 
 </h1>
 <p class="py-6 text-xl max-w-2xl">
@@ -393,60 +92,72 @@ fullstack dev & automation nerd who loves building bots, ai tools, and sleek web
 see projects
 </button>
 </div>
-<div class="flex gap-4 mt-8 justify-center lg:justify-start">
-<a href="https://github.com/SatzzDev" class="btn btn-circle btn-ghost text-2xl">
-<i class="fab fa-github"></i>
-</a>
-<a href="https://instagram.com/krniwnstria" class="btn btn-circle btn-ghost text-2xl">
-<i class="fab fa-instagram"></i>
-</a>
-<a href="https://tiktok.com/@satzzdev" class="btn btn-circle btn-ghost text-2xl">
-<i class="fab fa-tiktok"></i>
-</a>
-<a href="https://t.me/krniwnstria" class="btn btn-circle btn-ghost text-2xl">
-<i class="fab fa-telegram"></i>
-</a>
-<a href="whatsapp://send?phone=6282170988479" class="btn btn-circle btn-ghost text-2xl">
-<i class="fab fa-whatsapp"></i>
-</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about" class="page hidden-page px-4 py-8">
+<div class="hero">
+<div class="hero-content flex flex-col lg:flex-row gap-6 w-full max-w-6xl mx-auto px-4">
+<!-- Card Foto -->
+<div class="card w-full max-w-xs bg-base-200 shadow-xl mx-auto lg:mx-0">
+<figure class="px-6 pt-6">
+<img src="https://res.cloudinary.com/dz15rwevx/image/upload/v1749385666/logo_izvheb.png" alt="SatzzDev" class="rounded-xl w-full h-auto" />
+</figure>
+<div class="card-body text-center">
+<h2 class="card-title justify-center text-primary">Kurniawan Satria</h2>
+</div>
+</div>
+<!-- About Content -->
+<div class="flex-1 w-full">
+<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 text-center lg:text-left">About Me</h1>
+
+<div class="prose prose-sm md:prose-base lg:prose-lg max-w-none mb-6">
+<p class="text-base md:text-lg leading-relaxed">
+Hey there! I'm <span class="font-bold text-primary">Kurniawan Satria</span>, 
+but most people know me as <span class="font-bold text-secondary">SatzzDev</span>. 
+I'm a passionate fullstack developer who loves turning ideas into reality through code.
+</p>
+<p class="mt-4 text-base md:text-lg leading-relaxed">
+I specialize in building automation tools, AI-powered bots, and sleek web apps.
+Whether it's a WhatsApp bot or a complex UI/UX project, I'm always up for a challenge.
+</p>
+</div>
+
+<!-- 2 Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="card bg-base-200 shadow-lg">
+<div class="card-body p-4">
+<h3 class="card-title text-primary text-lg md:text-xl"><i class="fas fa-rocket"></i> What I Do</h3>
+<ul class="list-disc list-inside space-y-1 text-sm md:text-base">
+<li>Build responsive web apps</li>
+<li>Create automation bots</li>
+<li>Develop AI tools</li>
+<li>Design UI/UX</li>
+<li>Optimize performance</li>
+</ul>
+</div>
+</div>
+<div class="card bg-base-200 shadow-lg">
+<div class="card-body p-4">
+<h3 class="card-title text-secondary text-lg md:text-xl"><i class="fas fa-heart"></i> What I Love</h3>
+<ul class="list-disc list-inside space-y-1 text-sm md:text-base">
+<li>Learning new tech</li>
+<li>Solving problems</li>
+<li>Contributing to OSS</li>
+<li>Collab w/ devs</li>
+<li>Creating helpful tools</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 </section>
 
-<!-- About Page -->
-<section id="about" class="page hidden-page">
-<div class="py-20">
-<h2 class="text-5xl font-bold text-center text-primary mb-16">About Me</h2>
-<div class="hero min-h-screen">
-<div class="hero-content flex-col lg:flex-row gap-12">
-<div class="avatar floating">
-<div class="w-80 rounded-2xl shadow-2xl">
-<img src="https://res.cloudinary.com/dz15rwevx/image/upload/v1749385666/logo_izvheb.png" alt="SatzzDev" />
-</div>
-</div>
-<div class="max-w-2xl text-center lg:text-left">
-<h3 class="text-3xl font-semibold mb-6">Yo, I'm SatzzDev! 🚀</h3>
-<p class="text-xl mb-6">
-A fullstack dev with a knack for crafting slick web apps, AI-powered bots, and automation tools. I live for turning ideas into reality with code, coffee, and a bit of creativity. Been diving into JavaScript, Python, and Node.js to build stuff that’s both functional and fun.
-</p>
-<p class="text-xl mb-6">
-When I’m not coding, you’ll find me experimenting with new tech, sipping coffee, or maybe even memeing on X. My mission? To make the digital world a cooler place, one project at a time. <span class="text-secondary font-medium">Wanna join the ride?</span>
-</p>
-<div class="flex gap-4 justify-center lg:justify-start">
-<a href="mailto:satganzdevs@gmail.com" class="btn btn-outline btn-primary btn-lg">
-<i class="fas fa-envelope"></i> Hit Me Up
-</a>
-<a href="https://github.com/SatzzDev" class="btn btn-outline btn-secondary btn-lg">
-<i class="fab fa-github"></i> Check My Code
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+
 <!-- Skills Page -->
 <section id="skills" class="page hidden-page">
 <div class="py-20">
