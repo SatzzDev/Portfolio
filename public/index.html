@@ -346,7 +346,7 @@ SatzzDev.
 </a>
 </div>
 <div class="navbar-end">
-<div class="dropdown">
+<!-- <div class="dropdown">
 <div tabindex="0" role="button" class="btn btn-ghost">
 <i class="fas fa-palette"></i>
 </div>
@@ -355,7 +355,7 @@ SatzzDev.
 <input
 type="radio"
 name="theme-dropdown"
-class="theme-controller w-md btn btn-sm btn-block btn-ghost justify-start"
+class="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start"
 aria-label="Default"
 value="default" />
 </li>
@@ -384,7 +384,7 @@ aria-label="Dracula"
 value="dracula" />
 </li>
 </ul>
-</div>
+</div> -->
 <!-- Mobile Navigation -->
 <div class="lg:hidden dropdown dropdown-end">
 <div tabindex="0" role="button" class="btn btn-ghost">
@@ -456,23 +456,24 @@ see projects
 <!-- About Page -->
 <section id="about" class="page hidden-page">
 <div class="hero min-h-screen">
-<div class="hero-content flex-col lg:flex-row gap-12">
-<div class="card w-96 bg-base-200 shadow-xl">
+<div class="hero-content flex-col lg:flex-row gap-8 max-w-7xl mx-auto px-4">
+<div class="card w-full max-w-sm lg:w-96 bg-base-200 shadow-xl">
 <figure class="px-6 pt-6">
-<img src="https://res.cloudinary.com/dz15rwevx/image/upload/v1749385666/logo_izvheb.png" alt="SatzzDev" class="rounded-xl" />
+<img src="https://res.cloudinary.com/dz15rwevx/image/upload/v1749385666/logo_izvheb.png" alt="SatzzDev" class="rounded-xl w-full h-auto max-w-80" />
 </figure>
 <div class="card-body text-center">
 <h2 class="card-title justify-center text-primary">Kurniawan Satria</h2>
 </div>
 </div>
-<div class="flex-1">
-<h1 class="text-5xl font-bold text-primary mb-8">About Me</h1>
-<div class="prose prose-lg max-w-none mb-8">
-<p class="text-xl leading-relaxed">
-Hey there! I'm <span class="font-bold text-primary">Kurniawan Satria</span>, but most people know me as <span class="font-bold text-secondary">SatzzDev</span>. 
+<div class="flex-1 w-full">
+<h1 class="text-3xl lg:text-5xl font-bold text-primary mb-6 lg:mb-8 text-center lg:text-left">About Me</h1>
+<div class="prose prose-sm lg:prose-lg max-w-none mb-6 lg:mb-8">
+<p class="text-lg lg:text-xl leading-relaxed">
+Hey there! I'm <span class="font-bold text-primary">Kurniawan Satria</span>, 
+but most people know me as <span class="font-bold text-secondary">SatzzDev</span>. 
 I'm a passionate fullstack developer who loves turning ideas into reality through code.
 </p>
-<p class="text-lg leading-relaxed mt-4">
+<p class="text-base lg:text-lg leading-relaxed mt-4">
 My journey started with curiosity about how things work behind the scenes. Now, I specialize in building 
 automation tools, AI-powered bots, and sleek web applications that solve real-world problems. 
 Whether it's a WhatsApp bot that can download YouTube videos or a complex web application with modern UI/UX, 
@@ -480,7 +481,7 @@ I'm always excited to take on new challenges.
 </p>
 </div>
 
-<div class="mockup-code bg-base-300 mb-8">
+<div class="mockup-code bg-base-300 mb-6 lg:mb-8 text-xs lg:text-sm overflow-x-auto">
 <pre data-prefix="$"><code>const SatzzDev = {</code></pre>
 <pre data-prefix=">" class="text-warning"><code>  name: "Kurniawan Satria",</code></pre>
 <pre data-prefix=">" class="text-success"><code>  role: "Fullstack Developer",</code></pre>
@@ -497,14 +498,14 @@ I'm always excited to take on new challenges.
 <pre data-prefix="#" class="text-base-content/70"><code>// Always down to collab or chat about cool projects!</code></pre>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
 <div class="card bg-base-200 shadow-lg">
-<div class="card-body">
-<h3 class="card-title text-primary">
+<div class="card-body p-4 lg:p-6">
+<h3 class="card-title text-primary text-lg lg:text-xl">
 <i class="fas fa-rocket"></i>
 What I Do
 </h3>
-<ul class="list-disc list-inside space-y-2">
+<ul class="list-disc list-inside space-y-1 lg:space-y-2 text-sm lg:text-base">
 <li>Build responsive web applications</li>
 <li>Create automation bots for various platforms</li>
 <li>Develop AI-powered tools and features</li>
@@ -515,12 +516,12 @@ What I Do
 </div>
 
 <div class="card bg-base-200 shadow-lg">
-<div class="card-body">
-<h3 class="card-title text-secondary">
+<div class="card-body p-4 lg:p-6">
+<h3 class="card-title text-secondary text-lg lg:text-xl">
 <i class="fas fa-heart"></i>
 What I Love
 </h3>
-<ul class="list-disc list-inside space-y-2">
+<ul class="list-disc list-inside space-y-1 lg:space-y-2 text-sm lg:text-base">
 <li>Learning new technologies</li>
 <li>Solving complex problems</li>
 <li>Open source contributions</li>
@@ -531,10 +532,10 @@ What I Love
 </div>
 </div>
 
-<div class="mt-8">
-<div class="alert alert-info">
-<i class="fas fa-info-circle"></i>
-<span>
+<div class="mt-6 lg:mt-8">
+<div class="alert alert-info p-4">
+<i class="fas fa-info-circle text-lg"></i>
+<span class="text-sm lg:text-base">
 <strong>Fun Fact:</strong> I started programming because I wanted to automate my gaming tasks. 
 Now I help others automate their workflows and build amazing digital experiences!
 </span>
