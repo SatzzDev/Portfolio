@@ -1,19 +1,21 @@
-const tabs = document.querySelectorAll('.tab-btn')
+const tabs = document.querySelectorAll('.tab')
 const pages = document.querySelectorAll('.page')
 const projectCards = document.querySelectorAll('.project-card')
-document.querySelectorAll('.tab-btn').forEach(btn => {
-btn.addEventListener('click', () => {
-const page = btn.getAttribute('data-page');
-});
-});
+
 tabs.forEach(tab => {
 tab.addEventListener('click', () => {
 const target = tab.dataset.page
-tabs.forEach(t => t.classList.remove('active'))
-tab.classList.add('active')
+tabs.forEach(t => t.classList.remove('tab-active'))
+tab.classList.add('tab-active')
 pages.forEach(p => p.classList.add('hidden-page'))
 document.getElementById(target).classList.remove('hidden-page')
-window.scrollTo(0,0)
+
+// Smooth scroll to top for mobile
+window.scrollTo({
+top: 0,
+left: 0,
+behavior: 'smooth'
+})
 })
 })
 projectCards.forEach(card => {
@@ -26,3 +28,10 @@ console.error('No href found for this project');
 }
 });
 })
+
+var typed = new Typed('#typ', {
+strings: ['SatzzDev.'],
+typeSpeed: 50,
+backSpeed: 50,
+loop: true,
+});
