@@ -1,393 +1,257 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="night">
+<html lang="id">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="SatzzDev - Fullstack Developer & Automation Nerd" />
-<meta name="keywords" content="SatzzDev, Kurniawan, Satria, Satzz, Kurniawan Satria" />
-<meta name="author" content="SatzzDev" />
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://satzzdev.vercel.app">
-<meta property="og:title" content="SatzzDev">
-<meta property="og:description" content="SatzzDev - Fullstack Developer & Automation Nerd">
-<meta property="og:image" content="https://res.cloudinary.com/dz15rwevx/image/upload/v1749385666/logo_izvheb.png">
-<link rel="apple-touch-icon" sizes="57x57" href="/aset/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/aset/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/aset/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/aset/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/aset/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/aset/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/aset/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/aset/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/aset/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/aset/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/aset/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/aset/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/aset/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/aset/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-<title>SatzzDev</title>
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.3/dist/full.css" rel="stylesheet" />
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>SatzzDev | Portofolio</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <link rel="stylesheet" href="style.css">
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
-<body class="min-h-screen bg-base-100">
+<body>
+<nav>
+<a href="#" class="logo">Satzz<span style="color: var(--accent);">Dev</span></a>
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#about">Tentang</a>
+<a href="#tech-stack">Tech Stack</a>
+<a href="#projects">Proyek</a>
+</div>
+</nav>
 
-<div class="navbar bg-base-100/90 backdrop-blur-md sticky top-0 z-50 shadow-lg">
-<div class="navbar-start">
-<a href="#" class="btn btn-ghost text-xl font-bold text-primary" id="nav-home">
-SatzzDev.
-</a>
-</div>
-<div class="navbar-end">
-<!-- Mobile Navigation -->
-<div class="lg:hidden dropdown dropdown-end">
-<div tabindex="0" role="button" class="btn btn-ghost">
-<i class="fas fa-bars"></i>
-</div>
-<ul tabindex="0" class="dropdown-content menu bg-base-200 rounded-box z-50 w-52 p-2 shadow-2xl">
-<li><a class="tab" data-page="home">Home</a></li>
-<li><a class="tab" data-page="about">About</a></li>
-<li><a class="tab" data-page="skills">Skills</a></li>
-<li><a class="tab" data-page="projects">Projects</a></li>
-</ul>
-</div>
-<!-- Desktop Navigation -->
-<div class="tabs tabs-boxed hidden lg:flex">
-<div class="tab tab-active" data-page="home">Home</div>
-<div class="tab" data-page="about">About</div>
-<div class="tab" data-page="skills">Skills</div>
-<div class="tab" data-page="projects">Projects</div>
-</div>
-</div>
-</div>
 
-<main class="container mx-auto px-4 py-8">
-<!-- Home Page -->
-<section id="home" class="page">
-<div class="hero min-h-screen">
-<div class="hero-content text-center lg:text-left flex-col lg:flex-row-reverse">
-<div class="avatar floating">
-<div class="w-80 rounded-2xl shadow-2xl">
-<img src="https://res.cloudinary.com/dz15rwevx/image/upload/v1749385666/logo_izvheb.png" alt="SatzzDev"/>
+<section id="home" class="page" data-anim="home">
+<!-- Canvas untuk partikel -->
+<canvas id="particle-canvas"></canvas>
+
+<div class="page-content">
+<div class="avatar-container">
+<img src="https://avatars.githubusercontent.com/u/111582007" alt="Avatar" class="avatar" data-anim-target="avatar">
 </div>
-</div>
+<h1 class="home-title" data-anim-target="homeTitle">Hai, Saya <span id="typ"></span></h1>
+<p class="home-desc" data-anim-target="homeDesc">Fullstack Developer dengan passion untuk membangun aplikasi web modern dari frontend hingga backend.</p>
 <div>
-<h1 class="text-4xl font-bold">
-hey, i'm <span id="typ" class="text-primary"></span> 
-</h1>
-<p class="py-6 text-xl max-w-2xl">
-fullstack dev & automation nerd who loves building bots, ai tools, and sleek web apps.
-<span class="text-secondary font-medium">let's make cool stuff together.</span>
-</p>
-<div class="text-center lg:text-left">
-<button class="btn btn-outline btn-lg tab" data-page="projects">
-<i class="fas fa-code"></i>
-see projects
-</button>
+<a href="#projects" class="btn" data-anim-target="homeBtn">Lihat Proyek</a>
+<a href="#tech-stack" class="btn btn-outline">Tech Stack</a>
+</div>
+</div>
+</section>
+
+<section id="about" class="page" data-anim="about">
+<div class="page-content">
+<h2 class="section-title" data-anim-target="aboutTitle">Tentang Saya</h2>
+<div class="about-content">
+<div class="about-img" data-anim-target="aboutImg">
+<img src="/home.jpg" alt="Tentang Saya">
+</div>
+<div class="about-text" data-anim-target="aboutText">
+<h3>Fullstack Developer</h3>
+<p>Saya seorang pengembang fullstack dengan pengalaman lebih dari 5 tahun dalam membangun aplikasi web modern dari frontend hingga backend. Spesialisasi saya mencakup React, Next.js untuk frontend dan Node.js, Express untuk backend.</p>
+<p>Saya percaya dalam menciptakan solusi teknologi yang tidak hanya fungsional tetapi juga memberikan pengalaman pengguna yang luar biasa. Dengan pendekatan holistik, saya memastikan setiap aspek aplikasi bekerja secara harmonis.</p>
+<p>Di luar pengembangan perangkat lunak, saya menikmati eksplorasi teknologi baru, kontribusi open source, dan berbagi pengetahuan melalui blog dan konferensi.</p>
+<a href="#" class="btn">Unduh CV</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="tech-stack" class="page" data-anim="techStack">
+<div class="tech-container">
+<h2 class="section-title" data-anim-target="techTitle">Tech Stack</h2>
+<div class="tech-grid">
+<!-- Kartu Frontend -->
+<div class="tech-category-card" data-anim-target="techCard">
+<h3 class="tech-category-title">Frontend</h3>
+<div class="tech-items-grid">
+<div class="tech-item">
+<div class="tech-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+</div>
+<span class="tech-name">React</span>
+</div>
+<div class="tech-item">
+<div class="tech-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js">
+</div>
+<span class="tech-name">Next.js</span>
+</div>
+<div class="tech-item">
+<div class="tech-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+</div>
+<span class="tech-name">TypeScript</span>
+</div>
+<div class="tech-item">
+<div class="tech-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="TailwindCSS">
+</div>
+<span class="tech-name">TailwindCSS</span>
+</div>
+</div>
+</div>
+
+<!-- Kartu Backend -->
+<div class="tech-category-card" data-anim-target="techCard">
+<h3 class="tech-category-title">Backend</h3>
+<div class="tech-items-grid">
+<div class="tech-item">
+<div class="tech-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+</div>
+<span class="tech-name">Node.js</span>
+</div>
+<div class="tech-item">
+<div class="tech-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express">
+</div>
+<span class="tech-name">Express</span>
+</div>
+<div class="tech-item">
+<div class="tech-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+</div>
+<span class="tech-name">Python</span>
+</div>
+<div class="tech-item">
+<div class="tech-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+</div>
+<span class="tech-name">MongoDB</span>
+</div>
+</div>
+</div>
+
+<!-- Kartu DevOps -->
+<div class="tech-category-card" data-anim-target="techCard">
+<h3 class="tech-category-title">DevOps</h3>
+<div class="tech-items-grid">
+<div class="tech-item">
+<div class="tech-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+</div>
+<span class="tech-name">Docker</span>
+</div>
+<div class="tech-item">
+<div class="tech-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+</div>
+<span class="tech-name">Git</span>
+</div>
+<div class="tech-item">
+<div class="tech-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
+</div>
+<span class="tech-name">Linux</span>
+</div>
+<div class="tech-item">
+<div class="tech-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx">
+</div>
+<span class="tech-name">Nginx</span>
+</div>
+</div>
+</div>
+
+<!-- Kartu Tools -->
+<div class="tech-category-card" data-anim-target="techCard">
+<h3 class="tech-category-title">Tools</h3>
+<div class="tech-items-grid">
+<div class="tech-item">
+<div class="tech-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+</div>
+<span class="tech-name">VS Code</span>
+</div>
+<div class="tech-item">
+<div class="tech-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+</div>
+<span class="tech-name">GitHub</span>
+</div>
+<div class="tech-item">
+<div class="tech-icon">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" alt="Vercel">
+</div>
+<span class="tech-name">Vercel</span>
+</div>
 </div>
 </div>
 </div>
 </div>
 </section>
 
-<section id="about" class="page hidden-page px-4 py-8">
-<div class="hero">
-<div class="hero-content flex flex-col lg:flex-row gap-6 w-full max-w-6xl mx-auto px-4">
-<!-- Card Foto -->
-<div class="card w-full max-w-xs bg-base-200 shadow-xl mx-auto lg:mx-0">
-<figure class="px-6 pt-6">
-<img src="https://res.cloudinary.com/dz15rwevx/image/upload/v1749385666/logo_izvheb.png" alt="SatzzDev" class="rounded-xl w-full h-auto" />
-</figure>
-<div class="card-body text-center">
-<h2 class="card-title justify-center text-primary">Kurniawan Satria</h2>
+<section id="projects" class="page" data-anim="projects">
+<div class="page-content">
+<h2 class="section-title" data-anim-target="projectsTitle">Proyek Terbaru</h2>
+<div class="projects-grid">
+<div class="project-card" data-anim-target="projCard">
+<div class="project-img">
+<img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Proyek 1">
 </div>
+<div class="project-content">
+<h3 class="project-title">Sistem Manajemen E-commerce</h3>
+<p class="project-desc">Platform belanja online dengan Next.js di frontend dan Node.js di backend, terintegrasi dengan gateway pembayaran.</p>
+<div class="project-tags">
+<span class="tag">Next.js</span>
+<span class="tag">Node.js</span>
+<span class="tag">MongoDB</span>
 </div>
-<!-- About Content -->
-<div class="flex-1 w-full">
-<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 text-center lg:text-left">About Me</h1>
-
-<div class="prose prose-sm md:prose-base lg:prose-lg max-w-none mb-6">
-<p class="text-base md:text-lg leading-relaxed">
-Hey there! I'm <span class="font-bold text-primary">Kurniawan Satria</span>, 
-but most people know me as <span class="font-bold text-secondary">SatzzDev</span>. 
-I'm a passionate fullstack developer who loves turning ideas into reality through code.
-</p>
-<p class="mt-4 text-base md:text-lg leading-relaxed">
-I specialize in building automation tools, AI-powered bots, and sleek web apps.
-Whether it's a WhatsApp bot or a complex UI/UX project, I'm always up for a challenge.
-</p>
+<a href="#" class="btn">Lihat Detail</a>
+</div>
 </div>
 
-<!-- 2 Cards -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<div class="card bg-base-200 shadow-lg">
-<div class="card-body p-4">
-<h3 class="card-title text-primary text-lg md:text-xl"><i class="fas fa-rocket"></i> What I Do</h3>
-<ul class="list-disc list-inside space-y-1 text-sm md:text-base">
-<li>Build responsive web apps</li>
-<li>Create automation bots</li>
-<li>Develop AI tools</li>
-<li>Design UI/UX</li>
-<li>Optimize performance</li>
-</ul>
+<div class="project-card" data-anim-target="projCard">
+<div class="project-img">
+<img src="https://images.unsplash.com/photo-1463171379579-3fdfb86d6285?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Proyek 2">
+</div>
+<div class="project-content">
+<h3 class="project-title">Platform Analitik Real-time</h3>
+<p class="project-desc">Dashboard analitik dengan visualisasi data interaktif menggunakan React dan D3.js, didukung oleh Python di backend.</p>
+<div class="project-tags">
+<span class="tag">React</span>
+<span class="tag">Python</span>
+<span class="tag">D3.js</span>
+</div>
+<a href="#" class="btn">Lihat Detail</a>
 </div>
 </div>
-<div class="card bg-base-200 shadow-lg">
-<div class="card-body p-4">
-<h3 class="card-title text-secondary text-lg md:text-xl"><i class="fas fa-heart"></i> What I Love</h3>
-<ul class="list-disc list-inside space-y-1 text-sm md:text-base">
-<li>Learning new tech</li>
-<li>Solving problems</li>
-<li>Contributing to OSS</li>
-<li>Collab w/ devs</li>
-<li>Creating helpful tools</li>
-</ul>
+
+<div class="project-card" data-anim-target="projCard">
+<div class="project-img">
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Proyek 3">
 </div>
+<div class="project-content">
+<h3 class="project-title">Aplikasi Manajemen Proyek</h3>
+<p class="project-desc">Alat kolaborasi tim dengan fitur manajemen tugas, pelacakan waktu, dan integrasi dengan Git.</p>
+<div class="project-tags">
+<span class="tag">React</span>
+<span class="tag">Express</span>
+<span class="tag">Docker</span>
 </div>
+<a href="#" class="btn">Lihat Detail</a>
 </div>
 </div>
 </div>
 </div>
 </section>
 
-
-<!-- Skills Page -->
-<section id="skills" class="page hidden-page">
-<div class="py-20">
-<h2 class="text-5xl font-bold text-center text-primary mb-16">My Skills</h2>
-<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-
-<div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all">
-<div class="card-body items-center text-center">
-<div class="avatar">
-<div class="w-16 rounded-full bg-yellow-400 p-2">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+<footer>
+<div class="social-links">
+<a href="https://github.com/SatzzDev"><i class="fab fa-github"></i></a>
+<a href="https://instagram.com/krniwnstria"><i class="fab fa-instagram"></i></a>
+<a href="https://t.me/SatzzDev"><i class="fab fa-telegram"></i></a>
 </div>
-</div>
-<h3 class="card-title text-lg">JavaScript</h3>
-<progress class="progress progress-primary w-full" value="95" max="100"></progress>
-</div>
-</div>
-
-<div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all">
-<div class="card-body items-center text-center">
-<div class="avatar">
-<div class="w-16 rounded-full bg-blue-500 p-2">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
-</div>
-</div>
-<h3 class="card-title text-lg">Python</h3>
-<progress class="progress progress-secondary w-full" value="90" max="100"></progress>
-</div>
-</div>
-
-<div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all">
-<div class="card-body items-center text-center">
-<div class="avatar">
-<div class="w-16 rounded-full bg-green-500 p-2">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
-</div>
-</div>
-<h3 class="card-title text-lg">Node.js</h3>
-<progress class="progress progress-accent w-full" value="92" max="100"></progress>
-</div>
-</div>
-
-<div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all">
-<div class="card-body items-center text-center">
-<div class="avatar">
-<div class="w-16 rounded-full bg-cyan-400 p-2">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
-</div>
-</div>
-<h3 class="card-title text-lg">React</h3>
-<progress class="progress progress-info w-full" value="88" max="100"></progress>
-</div>
-</div>
-
-<div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all">
-<div class="card-body items-center text-center">
-<div class="avatar">
-<div class="w-16 rounded-full bg-blue-600 p-2">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
-</div>
-</div>
-<h3 class="card-title text-lg">Docker</h3>
-<progress class="progress progress-warning w-full" value="85" max="100"></progress>
-</div>
-</div>
-
-<div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all">
-<div class="card-body items-center text-center">
-<div class="avatar">
-<div class="w-16 rounded-full bg-orange-500 p-2">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
-</div>
-</div>
-<h3 class="card-title text-lg">Git</h3>
-<progress class="progress progress-success w-full" value="90" max="100"></progress>
-</div>
-</div>
-
-<div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all">
-<div class="card-body items-center text-center">
-<div class="avatar">
-<div class="w-16 rounded-full bg-green-600 p-2">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" />
-</div>
-</div>
-<h3 class="card-title text-lg">MongoDB</h3>
-<progress class="progress progress-primary w-full" value="80" max="100"></progress>
-</div>
-</div>
-
-<div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all">
-<div class="card-body items-center text-center">
-<div class="avatar">
-<div class="w-16 rounded-full bg-gray-800 p-2">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" class="invert" />
-</div>
-</div>
-<h3 class="card-title text-lg">Express</h3>
-<progress class="progress progress-secondary w-full" value="87" max="100"></progress>
-</div>
-</div>
-
-<div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all">
-<div class="card-body items-center text-center">
-<div class="avatar">
-<div class="w-16 rounded-full bg-orange-400 p-2">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bun/bun-original.svg" alt="Bun" />
-</div>
-</div>
-<h3 class="card-title text-lg">Bun</h3>
-<progress class="progress progress-accent w-full" value="10" max="100"></progress>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- Projects Page -->
-<section id="projects" class="page hidden-page">
-<div class="py-20">
-<h2 class="text-5xl font-bold text-center text-primary mb-16">My Projects</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-<div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all cursor-pointer project-card" data-title="WhatsApp Bot" data-href="whatsapp://send?phone=6281268248904">
-<figure class="px-6 pt-6">
-<div class="w-full h-48 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center">
-<i class="fab fa-whatsapp text-6xl text-white"></i>
-</div>
-</figure>
-<div class="card-body">
-<h2 class="card-title text-primary">WhatsApp Bot</h2>
-<p>AI-powered bot with YouTube download, persona system, and command features.</p>
-<div class="card-actions">
-<div class="badge badge-primary">Node.js</div>
-<div class="badge badge-secondary">AI</div>
-<div class="badge badge-accent">Automation</div>
-</div>
-</div>
-</div>
-
-<div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all cursor-pointer project-card" data-title="Telegram Bot" data-href="https://github.com/KurniawanSatria/YTBOT">
-<figure class="px-6 pt-6">
-<div class="w-full h-48 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center">
-<i class="fab fa-telegram text-6xl text-white"></i>
-</div>
-</figure>
-<div class="card-body">
-<h2 class="card-title text-primary">Telegram Bot</h2>
-<p>Bot with YouTube search and download features.</p>
-<div class="card-actions">
-<div class="badge badge-primary">Node.js</div>
-<div class="badge badge-accent">Automation</div>
-</div>
-</div>
-</div>
-
-<div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all cursor-pointer project-card" data-title="Prayer Time" data-href="https://kurniawansatria.github.io/JadwalSholat/">
-<figure class="px-6 pt-6">
-<div class="w-full h-48 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center">
-<i class="fas fa-mosque text-6xl text-white"></i>
-</div>
-</figure>
-<div class="card-body">
-<h2 class="card-title text-primary">Prayer Time</h2>
-<p>Web application to display prayer times based on location, with features like notifications and qibla direction.</p>
-<div class="card-actions">
-<div class="badge badge-info">JavaScript</div>
-<div class="badge badge-success">HTML</div>
-<div class="badge badge-warning">CSS</div>
-</div>
-</div>
-</div>
-
-<div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all cursor-pointer project-card" data-title="REST API" data-href="https://cybers-api.vercel.app">
-<figure class="px-6 pt-6">
-<div class="w-full h-48 bg-gradient-to-br from-blue-400 to-cyan-600 rounded-xl flex items-center justify-center">
-<i class="fas fa-server text-6xl text-white"></i>
-</div>
-</figure>
-<div class="card-body">
-<h2 class="card-title text-primary">REST API</h2>
-<p>A RESTful API service for managing and accessing data efficiently.</p>
-<div class="card-actions">
-<div class="badge badge-info">Node.js</div>
-<div class="badge badge-primary">Express</div>
-<div class="badge badge-success">MongoDB</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-</main>
-
-<!-- Footer -->
-<footer class="footer footer-center p-10 bg-base-200 text-base-content">
-<div>
-<h3 class="text-2xl font-bold text-primary">Let's Connect</h3>
-<div class="grid grid-flow-col gap-4 mt-4">
-<a href="https://github.com/SatzzDev" class="btn btn-circle btn-ghost text-2xl">
-<i class="fab fa-github"></i>
-</a>
-<a href="https://instagram.com/krniwnstria" class="btn btn-circle btn-ghost text-2xl">
-<i class="fab fa-instagram"></i>
-</a>
-<a href="https://tiktok.com/@satzzdev" class="btn btn-circle btn-ghost text-2xl">
-<i class="fab fa-tiktok"></i>
-</a>
-<a href="https://t.me/krniwnstria" class="btn btn-circle btn-ghost text-2xl">
-<i class="fab fa-telegram"></i>
-</a>
-<a href="whatsapp://send?phone=6282170988479" class="btn btn-circle btn-ghost text-2xl">
-<i class="fab fa-whatsapp"></i>
-</a>
-</div>
-<p class="max-w-2xl mt-4">
-Have a project in mind or want to discuss potential collaborations? Feel free to reach out! I'm always open to new ideas and opportunities.
-</p>
-<div class="mt-4">
-<a href="mailto:satganzdevs@gmail.com" class="btn btn-primary rounded-full">
-say hi👋
-</a>
-</div>
-</div>
-<div>
-<p>© <script>document.write(new Date().getFullYear())</script> SatzzDev | Crafted with 💙 and ☕</p>
-</div>
+<p>&copy; 2025 SatzzDev. All rights reserved.</p>
 </footer>
+
+<div class="scroll-top">
+<i class="fas fa-arrow-up"></i>
+</div>
 
 <script src="script.js"></script>
 </body>
