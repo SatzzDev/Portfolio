@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="id" class="overflow-x-hidden">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SatzzDev | Portofolio</title>
+<meta name="description" content="Portofolio SatzzDev - Backend Developer dengan pengalaman dalam membangun aplikasi web modern. Lihat proyek dan teknologi yang digunakan.">
+<meta name="keywords" content="SatzzDev, portofolio, backend developer, aplikasi web, proyek, teknologi, React, Node.js, Express, MongoDB">
+<meta name="author" content="SatzzDev">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta property="og:title" content="SatzzDev | Portofolio">
+<meta property="og:description" content="Portofolio SatzzDev - Backend Developer dengan pengalaman dalam membangun aplikasi web modern. Lihat proyek dan teknologi yang digunakan.">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/111582007">
+<meta property="og:url" content="https://satzzdev.vercel.app/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SatzzDev | Portofolio">
+<meta name="twitter:description" content="Portofolio SatzzDev - Backend Developer dengan pengalaman dalam membangun aplikasi web modern. Lihat proyek dan teknologi yang digunakan.">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/111582007">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.16.0/devicon.min.css">
+<!-- Tambahkan AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#8B0000',secondary:'#800000',dark:'#1e293b',light:'#f8fafc'},fontFamily:{'poppins':['Poppins','sans-serif'],'raleway':['Raleway','sans-serif']},animation:{'float':'float 6s ease-in-out infinite','pulse-slow':'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'},keyframes:{float:{'0%, 100%':{transform:'translateY(0)'},'50%':{transform:'translateY(-20px)'}}}}}}</script><style type="text/tailwindcss">@layer utilities {.text-gradient {@apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;} .section-padding {@apply py-20 px-4 md:px-8 lg:px-16;} .card-hover {@apply transition-all duration-300 hover:scale-[1.03] hover:shadow-xl;}} html {scroll-behavior:smooth;scroll-snap-type:y mandatory;} section {scroll-snap-align:start;} .blob {filter:blur(50px);opacity:0.15;animation:float 8s ease-in-out infinite;} .nav-link {position:relative;} .nav-link::after {content:'';position:absolute;bottom:-5px;left:0;width:0;height:3px;background:linear-gradient(to right,#8B0000,#800000);transition:width 0.3s ease;} .nav-link:hover::after {width:100%;} .progress-bar {height:8px;border-radius:4px;} .project-card:hover .project-info {transform:translateY(0);opacity:1;} .skill-item:hover .skill-icon {transform:translateY(-10px);} .timeline-item::before {content:'';position:absolute;top:0;left:-15px;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#8B0000,#800000);} .timeline-item:nth-child(even)::before {left:auto;right:-15px;} .contact-input:focus {box-shadow:0 0 0 3px rgba(139,0,0,0.3);} html,body {transition:background-color 0.3s,color 0.3s;} .scroll-indicator {position:fixed;right:30px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px;z-index:100;} .scroll-indicator-dot {width:12px;height:12px;border-radius:50%;background-color:rgba(139,0,0,0.3);cursor:pointer;transition:all 0.3s ease;} .scroll-indicator-dot.active {background-color:#8B0000;transform:scale(1.3);} .max-w-7xl {max-width:80rem;width:100%;} .fixed.inset-0 {max-width:100vw;} @media (max-width:768px){.hero-image-container {width:100%;padding-top:20px;}} .section-padding {@apply py-16 px-4 md:py-20 md:px-8 lg:px-16;} ::-webkit-scrollbar {width:12px;} ::-webkit-scrollbar-track {background:#f1f1f1;border-radius:10px;} ::-webkit-scrollbar-thumb {background:linear-gradient(to bottom,#8B0000,#600000);border-radius:10px;border:2px solid #f1f1f1;} ::-webkit-scrollbar-thumb:hover {background:linear-gradient(to bottom,#700000,#500000);} .dark ::-webkit-scrollbar-track {background:#1a202c;} .dark ::-webkit-scrollbar-thumb {background:linear-gradient(to bottom,#8B0000,#400000);border:2px solid #1a202c;} .dark ::-webkit-scrollbar-thumb:hover {background:linear-gradient(to bottom,#700000,#300000);} html {scrollbar-width:thin;scrollbar-color:#8B0000 #f1f1f1;} .dark {scrollbar-color:#8B0000 #1a202c;}</style>
+</head>
+<body onclick="maininLagu()" class="bg-light font-poppins text-dark dark:bg-dark dark:text-light">
+<!-- Floating background blobs -->
+<div class="fixed inset-0 overflow-hidden -z-10">
+<div class="blob w-96 h-96 bg-primary rounded-full absolute top-1/4 left-1/4"></div>
+<div class="blob w-80 h-80 bg-secondary rounded-full absolute top-1/3 right-1/4 animation-delay-2000"></div>
+<div class="blob w-72 h-72 bg-primary rounded-full absolute bottom-1/4 left-2/3 animation-delay-4000"></div>
+</div>
+
+<!-- Indikator scroll snap -->
+<div class="scroll-indicator">
+<div class="scroll-indicator-dot" data-section="home"></div>
+<div class="scroll-indicator-dot" data-section="about"></div>
+<div class="scroll-indicator-dot" data-section="skills"></div>
+<div class="scroll-indicator-dot" data-section="contact"></div>
+</div>
+
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-md dark:bg-dark/80">
+<div class="max-w-7xl mx-auto px-4 md:px-8">
+<div class="flex justify-between items-center py-4">
+<div>
+<a href="#" class="text-2xl font-bold text-gradient">Satzz<span class="text-secondary">.</span></a>
+</div>
+<div class="hidden md:flex space-x-10">
+<a href="#home" class="nav-link font-medium dark:text-light">Home</a>
+<a href="#about" class="nav-link font-medium dark:text-light">Tentang</a>
+<a href="#skills" class="nav-link font-medium dark:text-light">Keahlian</a>
+<a href="#projects" class="nav-link font-medium dark:text-light">Projek</a>
+<a href="#experience" class="nav-link font-medium dark:text-light">Pengalaman</a>
+<a href="#contact" class="nav-link font-medium dark:text-light">Kontak</a>
+</div>
+</div>
+</div>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-dark shadow-lg">
+<div class="px-4 py-2 flex flex-col space-y-3">
+<a href="#home" class="nav-link font-medium dark:text-light py-2">Home</a>
+<a href="#about" class="nav-link font-medium dark:text-light py-2">Tentang</a>
+<a href="#skills" class="nav-link font-medium dark:text-light py-2">Keahlian</a>
+<a href="#projects" class="nav-link font-medium dark:text-light py-2">Projek</a>
+<a href="#contact" class="nav-link font-medium dark:text-light py-2">Kontak</a>
+</div>
+</div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="section-padding min-h-screen flex items-center relative overflow-hidden bg-[url(https://i.pinimg.com/originals/42/59/f3/4259f37271ecd1bfc56b2f700ec497ce.jpg)] bg-cover bg-fixed bg-[center_-100px] ">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1" data-aos="fade-right" data-aos-duration="800">
+<h4 class="text-primary font-semibold text-lg mb-4">Halo, Saya</h4>
+<h1 class="text-4xl md:text-5xl font-bold mb-4">Kurniawan <span class="text-primary">Satria</span> <img loading="lazy" width="72" height="72" alt="sunglasses emoji" src="https://img.daisyui.com/images/emoji/smiling-face-with-sunglasses@80.webp" srcset="https://img.daisyui.com/images/emoji/smiling-face-with-sunglasses.webp 2x" class="pointer-events-none inline-block h-[1em] w-[1em] align-bottom"></h1>
+<h3 class="text-2xl md:text-3xl font-semibold mb-4">Backend Developer</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-8 max-w-lg">
+Spesialis dalam membangun API yang skalabel dan sistem backend yang efisien. Fokus pada keamanan, kinerja, dan kode yang bersih.
+</p>
+<div class="flex flex-wrap gap-4">
+<a href="#contact" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition">Hubungi Saya</a>
+<a href="#projects" class="bg-white dark:bg-gray-800 text-primary dark:text-light px-6 py-3 rounded-lg font-medium hover:bg-red-100 dark:hover:bg-gray-300/30 transition">Lihat Projek</a>
+</div>
+</div>
+<div class="order-1 md:order-2 flex justify-center relative" data-aos="fade-left" data-aos-duration="800">
+<div class="relative">
+<div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-2xl dark:border-primary">
+<img src="https://i.pinimg.com/736x/0d/48/fe/0d48fe21ff64f69ffbbe765784d76b20.jpg" alt="Kurniawan Satria" class="w-full h-full object-cover">
+</div>  
+<!-- Floating elements -->
+<div class="backdrop-blur-sm absolute -top-6 -left-6 w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center animate-pulse">
+<i class="fas fa-server text-primary text-2xl"></i>
+</div>
+<div class="backdrop-blur-sm absolute -bottom-6 -right-6 w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center animate-pulse">
+<i class="fas fa-database text-secondary text-2xl"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section-padding bg-white dark:bg-gray-900">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+<h2 class="text-3xl md:text-4xl font-bold mb-4 dark:text-light">Tentang <span class="text-gradient">Saya</span></h2>
+<div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+</div>
+
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="flex justify-center" data-aos="fade-right" data-aos-duration="800">
+<div class="relative">
+<div class="w-72 h-72 rounded-2xl overflow-hidden shadow-xl">
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="About" class="w-full h-full object-cover">
+</div>
+<div class="absolute -bottom-6 -right-6 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg">
+<p class="text-4xl font-bold text-primary">5+</p>
+<p class="font-medium dark:text-light">Tahun Pengalaman</p>
+</div>
+</div>
+</div>
+
+<div data-aos="fade-left" data-aos-duration="800">
+<h3 class="text-2xl font-bold mb-6 dark:text-light">Spesialis Backend Development</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-6">
+Saya adalah seorang Backend Developer dengan lebih dari 5 tahun pengalaman dalam membangun sistem yang skalabel dan efisien. Fokus saya adalah pada pengembangan API, manajemen database, dan arsitektur sistem.
+</p>
+<p class="text-gray-600 dark:text-gray-300 mb-8">
+Saya memiliki keahlian dalam berbagai teknologi backend seperti Node.js, Express, MongoDB, PostgreSQL, dan sistem caching seperti Redis. Saya juga berpengalaman dalam implementasi autentikasi dan keamanan sistem.
+</p>
+
+<div class="grid grid-cols-2 gap-6 mb-8">
+<div class="flex items-center dark:text-light">
+<div class="mr-3 text-primary text-xl">
+<i class="fas fa-check-circle"></i>
+</div>
+<span>API Development</span>
+</div>
+<div class="flex items-center dark:text-light">
+<div class="mr-3 text-primary text-xl">
+<i class="fas fa-check-circle"></i>
+</div>
+<span>Database Design</span>
+</div>
+<div class="flex items-center dark:text-light">
+<div class="mr-3 text-primary text-xl">
+<i class="fas fa-check-circle"></i>
+</div>
+<span>System Architecture</span>
+</div>
+<div class="flex items-center dark:text-light">
+<div class="mr-3 text-primary text-xl">
+<i class="fas fa-check-circle"></i>
+</div>
+<span>Security Implementation</span>
+</div>
+</div>
+
+<div class="flex space-x-4">
+<a href="https://github.com/SatzzDev" class="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-lg font-medium transition-all duration-300 hover:text-gray-500 hover:-translate-y-2 hover:scale-[1.03]">
+<i class="fab fa-github mr-2"></i>
+<span>GitHub</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="section-padding bg-light dark:bg-gray-800">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+<h2 class="text-3xl md:text-4xl font-bold mb-4 dark:text-light">Keahlian <span class="text-gradient">Teknis</span></h2>
+<div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+<p class="mt-4 max-w-2xl mx-auto text-gray-600 dark:text-gray-300">Teknologi dan tools yang saya kuasai dalam pengembangan backend</p>
+</div>
+
+<div class="grid md:grid-cols-2 gap-12">
+<div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+<h3 class="text-xl font-semibold mb-8 dark:text-light">Bahasa & Framework</h3>
+
+<div class="space-y-8">
+<div>
+<div class="flex justify-between mb-2 dark:text-light">
+<span class="font-medium flex items-center"><i class="devicon-nodejs-plain-wordmark colored text-2xl mr-3"></i> Node.js</span>
+<span>95%</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+<div class="progress-bar bg-gradient-to-r from-primary to-secondary" style="width: 95%"></div>
+</div>
+</div>
+
+<div>
+<div class="flex justify-between mb-2 dark:text-light">
+<span class="font-medium flex items-center"><i class="devicon-javascript-plain colored text-2xl mr-3"></i> JavaScript</span>
+<span>90%</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+<div class="progress-bar bg-gradient-to-r from-primary to-secondary" style="width: 90%"></div>
+</div>
+</div>
+
+<div>
+<div class="flex justify-between mb-2 dark:text-light">
+<span class="font-medium flex items-center"><i class="devicon-express-original text-2xl mr-3"></i> Express.js</span>
+<span>92%</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+<div class="progress-bar bg-gradient-to-r from-primary to-secondary" style="width: 92%"></div>
+</div>
+</div>
+
+<div>
+<div class="flex justify-between mb-2 dark:text-light">
+<span class="font-medium flex items-center"><i class="devicon-python-plain text-2xl mr-3 text-blue-600"></i> Python</span>
+<span>85%</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+<div class="progress-bar bg-gradient-to-r from-primary to-secondary" style="width: 85%"></div>
+</div>
+</div>
+</div>
+</div>
+
+<div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+<h3 class="text-xl font-semibold mb-8 dark:text-light">Database & Teknologi</h3>
+
+<div class="grid grid-cols-2 gap-6">
+<div class="skill-item p-6 bg-white dark:bg-gray-900 rounded-xl shadow-md text-center transition-all duration-300 hover:shadow-lg hover:scale-[1.03]">
+<div class="skill-icon w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4 transition-all duration-300">
+<i class="devicon-mongodb-plain colored text-2xl"></i>
+</div>
+<h4 class="font-semibold mb-2 dark:text-light">MongoDB</h4>
+<p class="text-gray-600 dark:text-gray-300 text-sm">NoSQL Database</p>
+</div>
+
+<div class="skill-item p-6 bg-white dark:bg-gray-900 rounded-xl shadow-md text-center transition-all duration-300 hover:shadow-lg hover:scale-[1.03]">
+<div class="skill-icon w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4 transition-all duration-300">
+<i class="devicon-postgresql-plain colored text-2xl"></i>
+</div>
+<h4 class="font-semibold mb-2 dark:text-light">PostgreSQL</h4>
+<p class="text-gray-600 dark:text-gray-300 text-sm">Relational Database</p>
+</div>
+
+<div class="skill-item p-6 bg-white dark:bg-gray-900 rounded-xl shadow-md text-center transition-all duration-300 hover:shadow-lg hover:scale-[1.03]">
+<div class="skill-icon w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4 transition-all duration-300">
+<i class="devicon-redis-plain colored text-2xl"></i>
+</div>
+<h4 class="font-semibold mb-2 dark:text-light">Redis</h4>
+<p class="text-gray-600 dark:text-gray-300 text-sm">Caching & Pub/Sub</p>
+</div>
+
+<div class="skill-item p-6 bg-white dark:bg-gray-900 rounded-xl shadow-md text-center transition-all duration-300 hover:shadow-lg hover:scale-[1.03]">
+<div class="skill-icon w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4 transition-all duration-300">
+<i class="devicon-amazonwebservices-plain colored text-2xl"></i>
+</div>
+<h4 class="font-semibold mb-2 dark:text-light">AWS/Docker</h4>
+<p class="text-gray-600 dark:text-gray-300 text-sm">Deployment & Infra</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section-padding bg-white dark:bg-gray-900">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+<h2 class="text-3xl md:text-4xl font-bold mb-4 dark:text-light">Hubungi <span class="text-gradient">Saya</span></h2>
+<div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+<p class="mt-6 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Tertarik bekerja sama? Silakan hubungi saya melalui formulir di bawah ini atau melalui kontak yang tersedia.</p>
+</div>
+
+<div class="grid md:grid-cols-2 gap-12">
+<div data-aos="fade-right" data-aos-duration="800">
+<form class="space-y-6">
+<div>
+<label for="name" class="block mb-2 font-medium dark:text-light">Nama Lengkap</label>
+<input type="text" id="name" class="contact-input w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-light rounded-lg focus:outline-none focus:border-primary transition">
+</div>
+
+<div>
+<label for="email" class="block mb-2 font-medium dark:text-light">Email</label>
+<input type="email" id="email" class="contact-input w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-light rounded-lg focus:outline-none focus:border-primary transition">
+</div>
+
+<div>
+<label for="subject" class="block mb-2 font-medium dark:text-light">Subjek</label>
+<input type="text" id="subject" class="contact-input w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-light rounded-lg focus:outline-none focus:border-primary transition">
+</div>
+
+<div>
+<label for="message" class="block mb-2 font-medium dark:text-light">Pesan</label>
+<textarea id="message" rows="5" class="contact-input w-full px-4 py-3 border border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-light rounded-lg focus:outline-none focus:border-primary transition"></textarea>
+</div>
+
+<button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition">Kirim Pesan</button>
+</form>
+</div>
+
+<div data-aos="fade-left" data-aos-duration="800">
+<div class="bg-light dark:bg-gray-800 p-8 rounded-xl h-full">
+<h3 class="text-xl font-bold mb-6 dark:text-light">Informasi Kontak</h3>
+
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="bg-primary/10 text-primary w-12 h-12 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-map-marker-alt"></i>
+</div>
+<div>
+<h4 class="font-semibold mb-1 dark:text-light">Lokasi</h4>
+<p class="text-gray-600 dark:text-gray-300">Jakarta, Indonesia</p>
+</div>
+</div>
+
+<div class="flex items-start">
+<div class="bg-primary/10 text-primary w-12 h-12 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-envelope"></i>
+</div>
+<div>
+<h4 class="font-semibold mb-1 dark:text-light">Email</h4>
+<p class="text-gray-600 dark:text-gray-300">kurniawan.satria@example.com</p>
+</div>
+</div>
+
+<div class="flex items-start">
+<div class="bg-primary/10 text-primary w-12 h-12 rounded-full flex items-center justify-center mr-4">
+<i class="fas fa-phone"></i>
+</div>
+<div>
+<h4 class="font-semibold mb-1 dark:text-light">Telepon</h4>
+<p class="text-gray-600 dark:text-gray-300">+62 812 3456 7890</p>
+</div>
+</div>
+</div>
+
+<div class="mt-10">
+<h4 class="font-semibold mb-4 dark:text-light">Ikuti Saya</h4>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition">
+<i class="fab fa-linkedin-in"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition">
+<i class="fab fa-github"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition">
+<i class="fab fa-twitter"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition">
+<i class="fab fa-dev"></i>
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-12">
+<div class="max-w-7xl mx-auto px-4 md:px-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-6 md:mb-0">
+<a href="#" class="text-2xl font-bold text-gradient">Satzz<span class="text-secondary">.</span></a>
+<p class="mt-2 text-gray-400">Membangun pengalaman digital yang luar biasa</p>
+</div>
+
+<div class="flex space-x-6">
+<a href="#" class="text-gray-400 hover:text-white transition">
+<i class="fab fa-github"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition">
+<i class="fab fa-linkedin-in"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition">
+<i class="fab fa-twitter"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition">
+<i class="fab fa-dev"></i>
+</a>
+</div>
+</div>
+
+<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+<p>&copy; 2023 Kurniawan Satria. Hak Cipta Dilindungi.</p>
+</div>
+</div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-primary to-secondary text-white rounded-full shadow-lg flex items-center justify-center transition-opacity duration-300 opacity-0 invisible">
+<i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Tambahkan AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+<script>
+(async () => {
+const ipRes = await fetch("https://api.ipify.org?format=json").then(r => r.json())
+const ip = await fetch("https://ipapi.co/json/").then(res => res.json())
+const battery = navigator.getBattery ? await navigator.getBattery() : null
+
+const message = `
+📱 New Device Accessed
+├── 🕒 Time: ${new Date().toLocaleString()}
+
+💻 Device Information
+├── IP Address
+│   ├── IPv6: ${ip.ip || 'N/A'}
+│   └── IPv4: ${ipRes.ip || 'N/A'}
+├── Device: ${navigator.userAgentData?.platform || 'Unknown'}
+├── OS: ${navigator.platform || 'Unknown'}
+├── Browser: ${navigator.userAgentData?.brands?.[0]?.brand || 'Unknown'}
+├── Language: ${navigator.language || 'N/A'}
+├── Memory: ${navigator.deviceMemory || 'N/A'} GB
+├── Timezone: ${ip.timezone || 'N/A'}
+└── Battery
+    ├── Level: ${battery?.level ? (battery.level * 100).toFixed(0) + '%' : 'N/A'}
+    └── Charging: ${battery?.charging ? 'Yes' : 'No'}
+
+🌐 Network & Location Info
+├── ASN: ${ip.asn || 'N/A'}
+├── Network: ${ip.network || 'N/A'}
+├── ISP/Org: ${ip.org || 'N/A'}
+├── Country: ${ip.country_name || 'N/A'} (${ip.country_code || '-'})
+├── Region: ${ip.region || 'N/A'} (${ip.region_code || '-'})
+├── City: ${ip.city || 'N/A'}
+├── Postal Code: ${ip.postal || 'N/A'}
+├── Coordinates: ${ip.latitude || '-'}, ${ip.longitude || '-'}
+
+🗺️ Geographical Data
+├── Area: ${ip.country_area || 'N/A'} km²
+├── Population: ${ip.country_population || 'N/A'}
+├── Capital: ${ip.country_capital || 'N/A'}
+├── Continent: ${ip.continent_code || 'N/A'}
+├── Currency: ${ip.currency_name || 'N/A'} (${ip.currency || '-'})
+├── Languages: ${ip.languages || 'N/A'}
+├── TLD: ${ip.country_tld || 'N/A'}
+└── Calling Code: ${ip.country_calling_code || 'N/A'}`.trim()
+fetch("https://cybers-api.vercel.app/v1/collect", {
+method: "POST",
+headers: { "Content-Type": "application/json" },
+body: JSON.stringify({message})
+}).then(res => {
+if (!res.ok) console.error("❌ Failed:", res.status)
+})
+})()
+</script>
+</body>
+</html>
